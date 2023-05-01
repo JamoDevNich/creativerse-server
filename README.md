@@ -4,6 +4,11 @@ An unofficial dockerized server for Playful's Creativerse
 &nbsp;
 
 ## Get started
+### Compose file
+The included `docker-compose.yaml` file in this repository can be used to set up and run a Creativerse server in a few minutes.
+
+The image is hosted in the GitHub container repository.
+
 ### Suggested requirements
 - 300MB disk space (for the CreativerseServer data files downloaded from Steam during startup, these can be relocated by editing the compose file)
 - 2-10GB additional disk space (for any World Templates downloaded during startup, or preloaded by you, these can be relocated by editing the compose file)

@@ -2,7 +2,7 @@ version: "3.9"
 services:
   creativerse:
     build: .
-#    image: ghcr.io/jamodevnich/creativerse-server:latest
+    image: ghcr.io/jamodevnich/creativerse-server:main
     container_name: "creativerse-server"
     hostname: creativerse-server
     restart: "on-failure"
