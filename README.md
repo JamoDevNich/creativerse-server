@@ -1,6 +1,8 @@
 # Creativerse Standalone Server
 An unofficial dockerized server for Playful's Creativerse
 
+&nbsp;
+
 ## Get started
 ### Suggested requirements
 - 300MB disk space (for the CreativerseServer data files downloaded from Steam during startup, these can be relocated by editing the compose file)
@@ -30,14 +32,24 @@ Each template is about 2 GB in size. They can be manually downloaded from [mod.i
 If no templates are found when the server is started, the correct one for your world will be automatically downloaded.
 
 
+### Connecting to the server
+The server does not automatically show up in the LAN tab. You'll need to create a new direct connection, and enter the server address to connect.
+
+If you get a "domain not found" or similar error message, try using the server's IP address instead.
+
+&nbsp;
+
 ## Server operations
 ### Accessing the Web UI
-The Web UI can be accessed on port 26902. Various parameters relating to the game world can be configured via this interface. It may be a good idea to __avoid forwarding this port__ if you plan to expose your server to the internet.
+The Web UI can be accessed on port 26902, only from the server itself (localhost) and not from another device.
+
+Various parameters relating to the game world can be configured via this interface. It may be a good idea to __avoid forwarding this port__ if you plan to expose your server to the internet.
 
 
 ### Backups
 Creativerse automatically creates backups of your world. These will be placed into the `backups` folder. To customise the creation interval and amount of backups retained, see the available Environment Variables.
 
+&nbsp;
 
 ## Configuration
 ### Ports
@@ -64,6 +76,7 @@ By default, this container will not run as root. A user ID should be provided us
 
 This was done in hopes of being compatible with Podman (rootless) - let me know if it works for you!
 
+&nbsp;
 
 ## Contributing
 ### Info
@@ -79,8 +92,10 @@ Creativerse's server binary will immediately exit if:
 - It's launched from a folder outside of the data directory
 - `-worldId` is not provided to the binary
 
+&nbsp;
 
 ---
 
+&nbsp;
 
 This repo is not associated with Playful, Corp., and does not redistribute any IP. Creativerse is a registered trademark of Playful, Corp. in the U.S. and other countries.
