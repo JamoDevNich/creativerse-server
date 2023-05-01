@@ -1,0 +1,8 @@
+backups/*
+!backups/README.md
+data/*
+!data/README.md
+templates/*
+!templates/README.md
+worlds/*
+!worlds/README.md

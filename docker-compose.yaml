@@ -1,0 +1,34 @@
+version: "3.9"
+services:
+  creativerse:
+    build: .
+#    image: ghcr.io/jamodevnich/creativerse-server:latest
+    container_name: "creativerse-server"
+    hostname: creativerse-server
+    restart: "on-failure"
+    mem_limit: "8G"
+    user: "1000"
+    ports:
+      - 26900:26900/udp
+      - 26901:26901/udp
+      - 26902:26902/tcp
+    volumes:
+      - type: bind
+        source: "./data"
+        target: "/root/Steam/steamapps/common/Creativerse Dedicated Server"
+      - type: bind
+        source: "./backups"
+        target: "/srv/creativerse-server/backups"
+      - type: bind
+        source: "./worlds"
+        target: "/srv/creativerse-server/worlds"
+      - type: bind
+        source: "./templates"
+        target: "/srv/creativerse-server/templates"
+    environment:
+      - TZ=Europe/London
+#      - CREATIVERSE_WORLD_KEY=AUTO
+#      - CREATIVERSE_WORLD_BACKUPS_MINIMUM_INTERVAL_MINS=5
+#      - CREATIVERSE_WORLD_BACKUPS_TO_KEEP=2
+#      - CREATIVERSE_SERVER_ALWAYSFULLYVERIFYTEMPLATEFILE=false
+#      - CREATIVERSE_SERVER_MAXMIGRATIONDOWNLOADTHREADS=4

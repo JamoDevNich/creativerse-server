@@ -1,0 +1,11 @@
+README.md
+.gitignore
+.git
+*~
+Dockerfile
+docker-compose.yaml
+.dockerignore
+backups
+data
+templates
+worlds
